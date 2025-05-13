@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\KurikulumController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +25,6 @@ Route::get('/fakultas', function () {
 
     return view('fakultas.index',compact('kampus','fakultas'));
 });
+
+Route::get('/prodi',[KurikulumController::class, 'index']);
+
